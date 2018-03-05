@@ -31,8 +31,12 @@ func addTask(){
     print("Please describe your task.")
     let details = readLine()!
     print("How many days before the task is due?")
-    let dueDate = Int(readLine()!)!
-    let newTask = Task(title: title, dueDate: dueDate, details: details, completed: false)
+    var dueDate = Int(readLine()!)
+    while dueDate == nil {
+        print("How many days before the task is due?")
+        dueDate = Int(readLine()!)
+    }
+    let newTask = Task(title: title, dueDate: dueDate!, details: details, completed: false)
     listOfTasks.append(newTask)
 }
 
@@ -60,10 +64,10 @@ func viewTasks(){
     }
     if count >= 1 {
         print("Please select a task you want to view.")
-        let view = Int(readLine()!)
+        var view = Int(readLine()!)
         while view == nil || view! > count {
             print("Please select a task you want to view.")
-            let view = Int(readLine()!)
+            view = Int(readLine()!)
         }
         let duedate = calendar.date(byAdding: .day, value: listOfTasks[view!].dueDate, to: currentDate)
         print("Title: \(listOfTasks[view!].title)\nDescription: \(listOfTasks[view!].details)\nDue Date: \(dateFormatter.string(from: duedate!))")
@@ -85,10 +89,10 @@ func viewImcompltetedTasks(){
     }
     if count >= 1 {
         print("Please select a task you want to view.")
-        let view = Int(readLine()!)
+        var view = Int(readLine()!)
         while view == nil || view! > count {
             print("Please select a task you want to view.")
-            let view = Int(readLine()!)
+            view = Int(readLine()!)
         }
         let duedate = calendar.date(byAdding: .day, value: listOfTasks[view!].dueDate, to: currentDate)
         print("Title: \(listOfTasks[view!].title)\nDescription: \(listOfTasks[view!].details)\nDue Date: \(dateFormatter.string(from: duedate!))")
@@ -111,10 +115,10 @@ func viewCompletedTasks(){
     }
     if count >= 1 {
         print("Please select a task you want to view.")
-        let view = Int(readLine()!)
+        var view = Int(readLine()!)
         while view == nil {
             print("Please select a task you want to view.")
-            let view = Int(readLine()!)
+            view = Int(readLine()!)
         }
         let duedate = dateFormatter.calendar.date(byAdding: .day, value: listOfTasks[view!].dueDate, to: currentDate)
         print("Title: \(listOfTasks[view!].title)\nDescription: \(listOfTasks[view!].details)\nDue Date: \(dateFormatter.string(from: duedate!))")

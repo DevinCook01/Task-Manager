@@ -11,7 +11,7 @@ import Foundation
 func Menu(){
     print("********\n* Menu *\n********\n1. Add Task\n2. Remove Task\n3. View Tasks\n4. View Imccomplete Tasks\n5. View Complete Tasks\n6. Complete Task\n7. Exit")
     var userInput = Int(readLine()!)
-    if userInput != 1 && userInput != 2 && userInput != 3 && userInput != 4 && userInput != 5 && userInput != 6 && userInput != 7{
+    while userInput != 1 && userInput != 2 && userInput != 3 && userInput != 4 && userInput != 5 && userInput != 6 && userInput != 7{
         print("********\n* Menu *\n********\n1. Add Task\n2. Remove Task\n3. View Tasks\n4. View Imccomplete Tasks\n5. View Complete Tasks\n6. Complete Task")
         userInput = Int(readLine()!)
     }
@@ -41,4 +41,5 @@ func Menu(){
     }
     if userInput == 7{
     }
+
 }

@@ -25,7 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FEEDF9F820472A2700D25093 /* Task Manager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Task Manager"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEEDF9F820472A2700D25093 /* Task Manager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Task Manager"; path = "/Users/devincook/Desktop/Projects/Task Manager/build/Debug/Task Manager"; sourceTree = "<absolute>"; };
 		FEEDF9FB20472A2700D25093 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FEEDFA0220472A6800D25093 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		FEEDFA0420472BCB00D25093 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
@@ -46,16 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				FEEDF9FA20472A2700D25093 /* Task Manager */,
-				FEEDF9F920472A2700D25093 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		FEEDF9F920472A2700D25093 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FEEDF9F820472A2700D25093 /* Task Manager */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FEEDF9FA20472A2700D25093 /* Task Manager */ = {
@@ -112,7 +103,7 @@
 				en,
 			);
 			mainGroup = FEEDF9EF20472A2700D25093;
-			productRefGroup = FEEDF9F920472A2700D25093 /* Products */;
+			productRefGroup = FEEDF9EF20472A2700D25093;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
