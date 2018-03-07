@@ -21,10 +21,12 @@ class Task {
         self.completed = completed
     }
 }
+
 let currentDate = Date()
 let dateFormatter = DateFormatter()
 let calendar = Calendar.current
 var listOfTasks = [Task]()
+
 func addTask(){
     print("What is the name of your task?")
     let title = readLine()!
@@ -41,6 +43,7 @@ func addTask(){
 }
 
 func removeTask(){
+    if listOfTasks.count > 0 {
     for i in 0...listOfTasks.count - 1 {
         print("\(i). \(listOfTasks[i].title)")
     }
@@ -49,8 +52,12 @@ func removeTask(){
     while remove == nil {
         print("Please select a task you want to remove.")
         remove = Int(readLine()!)
+        }
+        listOfTasks.remove(at: remove!)
     }
-    listOfTasks.remove(at: remove!)
+    if listOfTasks.count == 0 {
+        print("There are no tasks to remove.")
+    }
 }
 
 func viewTasks(){
@@ -131,10 +138,12 @@ func viewCompletedTasks(){
 func completeTask(){
     dateFormatter.dateFormat = "EEEE, MM dd, yyyy"
     var count = 0
+    if listOfTasks.count > 0{
     for o in 0...listOfTasks.count - 1 {
         if !listOfTasks[0].completed{
             print("\(o). \(listOfTasks[o].title)")
             count += 1
+            }
         }
     }
     if count >= 1 {
